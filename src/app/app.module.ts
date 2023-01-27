@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { MapViewerComponent } from './climatemap/map-viewer.component';
+import { MapViewerComponent } from './map-viewer-component/map-viewer.component';
 
 @NgModule({
   declarations: [

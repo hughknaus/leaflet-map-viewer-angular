@@ -40,7 +40,7 @@
                                 "inject": true
                             },
                             {
-                                "input": "../node_modules/leaflet/dist/leaflet.css",
+                                "input": "./node_modules/leaflet/dist/leaflet.css",
                                 "inject": true
                             }
                         ],
