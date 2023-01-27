@@ -19,15 +19,21 @@
                         "polyfills": "src/polyfills.ts",
                         "tsConfig": "src/tsconfig.app.json",
                         "assets": [
+                            "src/favicon.ico",
                             {
                                 "glob": "**/*",
                                 "input": "src/assets",
-                                "output": "assets"
+                                "output": "./assets"
                             },
                             {
                                 "glob": "**/*.svg",
                                 "input": "node_modules/ionicons/dist/ionicons/svg",
                                 "output": "./svg"
+                            },
+                            {
+                                "glob": "**/*.png",
+                                "input": "./node_modules/leaflet/dist/images",
+                                "output": "./"
                             }
                         ],
                         "scripts": [
