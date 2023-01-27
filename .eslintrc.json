@@ -1,0 +1,102 @@
+{
+    "root": true,
+    "ignorePatterns": ["projects/**/*", "src/**/*.spec.ts"],
+    "overrides": [
+        {
+            "files": ["*.ts"],
+            "parserOptions": {
+                "project": ["tsconfig.json"],
+                "createDefaultProgram": true
+            },
+            "extends": [
+                "plugin:@angular-eslint/recommended",
+                "plugin:@angular-eslint/template/process-inline-templates"
+            ],
+            "rules": {
+                "@angular-eslint/component-class-suffix": [
+                    "warn",
+                    {
+                        "suffixes": ["Page", "Component"]
+                    }
+                ],
+                "@angular-eslint/component-selector": [
+                    "warn",
+                    {
+                        "type": "element",
+                        "prefix": ["app", "sa", "fa"],
+                        "style": "kebab-case"
+                    }
+                ],
+                "@angular-eslint/directive-selector": [
+                    "warn",
+                    {
+                        "type": "attribute",
+                        "prefix": "app",
+                        "style": "camelCase"
+                    }
+                ],
+                "@typescript-eslint/naming-convention": [
+                    "warn",
+                    {
+                        "selector": ["classProperty", "variable", "function"],
+                        "format": ["camelCase"]
+                    },
+
+                    {
+                        "selector": [
+                            "class",
+                            "interface",
+                            "enum",
+                            "enumMember"
+                        ],
+                        "format": ["PascalCase"]
+                    }
+                ],
+                "@angular-eslint/no-output-on-prefix": "warn",
+                "@angular-eslint/no-output-native": "warn",
+                "@angular-eslint/no-inputs-metadata-property": "warn",
+                "@angular-eslint/no-outputs-metadata-property": "warn",
+                "@angular-eslint/no-host-metadata-property": "warn",
+                "@angular-eslint/no-input-rename": "warn",
+                "@angular-eslint/no-output-rename": "warn",
+                "@angular-eslint/use-lifecycle-interface": "warn",
+                "@angular-eslint/use-pipe-transform-interface": "warn",
+                "@angular-eslint/directive-class-suffix": "warn",
+                "@angular-eslint/template/no-negated-async": "warn",
+                "@typescript-eslint/no-unused-vars": "warn",
+                "@typescript-eslint/explicit-member-accessibility": [
+                    "warn",
+                    {
+                        "accessibility": "explicit",
+                        "overrides": {
+                            "accessors": "off",
+                            "constructors": "off",
+                            "methods": "explicit",
+                            "properties": "explicit",
+                            "parameterProperties": "explicit"
+                        },
+                        "ignoredMethodNames": [
+                            "canActivate",
+                            "canDeactivate",
+                            "ngOnInit",
+                            "ngOnDestroy",
+                            "ngOnChanges",
+                            "ngOnDismiss",
+                            "ngAfterViewInit",
+                            "ionViewWillLeave",
+                            "ionViewWillEnter",
+                            "ionViewDidEnter",
+                            "ionViewDidLoad",
+                            "ionViewDidLeave"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "files": ["*.html"],
+            "extends": ["plugin:@angular-eslint/template/recommended"],
+            "rules": {}
+        }
+    ]
+}
