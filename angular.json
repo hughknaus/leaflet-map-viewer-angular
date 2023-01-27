@@ -50,6 +50,11 @@
                                 "inject": true
                             }
                         ],
+                        "stylePreprocessorOptions": {
+                            "includePaths": [
+                              "src/**/*.scss"
+                            ]
+                          },
                         "allowedCommonJsDependencies": [
                             "lodash",
                             "subsink",
