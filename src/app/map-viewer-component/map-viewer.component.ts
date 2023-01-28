@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { geoJson } from 'leaflet';
-import { mergeMap, Observable, of, reduce } from 'rxjs';
+import { mergeMap, Observable, of } from 'rxjs';
+import {} from '@turf/turf';
 declare const L:any;
 
 @Component({
@@ -42,12 +42,15 @@ export class MapViewerComponent implements OnInit {
     // var layerGroup = new L.LayerGroup();
     // layerGroup.addTo(map);
 
-    const layerControl = L.control.layers(this.baseMaps).addTo(map);
+    map.on('click', (e) => { 
+      let popup = L.popup();
+      popup
+        .setLatLng(e.latlng)
+        .setContent("You clicked the map at " + e.latlng.toString())
+        .openOn(map);
+    });
 
-    // L.marker([51.5, -0.09])
-    //   .addTo(map)
-    //   .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
-    //   .openPopup();
+    const layerControl = L.control.layers(this.baseMaps).addTo(map);
 
     this.geoJsonAssets.forEach(item => {
       this.getJSON(item).subscribe(result => {
