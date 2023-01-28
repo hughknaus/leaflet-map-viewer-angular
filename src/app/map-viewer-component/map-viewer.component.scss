@@ -3,16 +3,17 @@
     width: -moz-calc(100% - 20px); 
     width: calc(100% - 20px); 
     height: 600px; 
-    border: 1px solid black; 
-    padding: 10px;
+    border: 1px solid green; 
+    margin: 10px;
 }
-.leaflet-div-icon2
+
+.leaflet-interactive.golddot
 {
-  background:yellow;
-  border:5px solid rgba(255,255,255,0.5);
-  color:goldenrod;
-  font-weight:bold;
-  text-align:center;
-  border-radius:50%;
-  line-height:30px;
+  background: yellow;
+  border: 5px solid rgba(255,255,255,0.5);
+  color: goldenrod;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 50%;
+  line-height: 30px;
 }

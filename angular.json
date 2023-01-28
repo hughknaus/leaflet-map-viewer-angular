@@ -143,7 +143,6 @@
                     },
                     "configurations": {
                         "production": {
-                            "browserTarget": "app:build:production"
                         }
                     }
                 },
@@ -161,9 +160,10 @@
     },
     "cli": {
         "analytics": false,
-        "schematicCollections": [
-            "@ionic/angular-toolkit"
-        ]
+        "schematicCollections": []
     },
-    "schematics": {}
+    "schematics":{
+        "@schematics/angular:component": {
+           "style": "scss" }
+     }
 }
